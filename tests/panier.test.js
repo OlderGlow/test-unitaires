@@ -17,7 +17,7 @@ describe('Test de la fonction calculTVA', () => {
 });
 describe('Test de la fonction calculFraisPort', () => {
     it('calculFraisPort doit retourner un nombre', () => {
-        should(calculerFraisPort('coucou')).be.a.Number();
+        should(calculerFraisPort(30)).be.a.Number();
         should(calculerFraisPort(23)).be.a.Number();
         should(calculerFraisPort(calculPanier())).be.a.Number();
     }
