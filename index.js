@@ -17,7 +17,7 @@ export const article3 = {
     quantite: 3
 };
 
-const calculerTVA = (prixHT, tauxTVA) => {
+export const calculerTVA = (prixHT, tauxTVA) => {
     if(isNaN(tauxTVA) || isNaN(prixHT)) {
         return 'Erreur, veuillez rentrer des nombres';
     }
@@ -33,7 +33,7 @@ const calculerTVA = (prixHT, tauxTVA) => {
     return prixHT * tauxTVA / 100;
 };
 
-const calculerFraisPort = (prixTotal) => {
+export const calculerFraisPort = (prixTotal) => {
     if(isNaN(prixTotal)) {
         return 'Erreur, veuillez rentrer un nombre';
     }
