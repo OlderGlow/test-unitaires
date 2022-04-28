@@ -6,5 +6,5 @@ test('Test de la fonction calculerTVA', () => {
     expect(calculerTVA(15, 5)).toBe(0.75);
 })
 test('Test de la fonction calculerFraisPort', () => {
-    expect(calculerFraisPort(103.25)).toBe(15);
+    expect(calculerFraisPort(103.25)).toBe(12);
 })
