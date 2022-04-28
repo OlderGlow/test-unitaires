@@ -1,26 +1,10 @@
-import { article1, article2, article3, calculPanier, calculerTVA, calculerFraisPort } from "../index.js";
-import should from "should";
-describe('Test de la fonction calculPanier', () => {
-    it('calculPanier doit retourner un nombre', () => {
-        debugger;
-        should(calculPanier()).be.a.Number();
-    }
-    );
-});
-describe('Test de la fonction calculTVA', () => {
-    it('calculTVA doit retourner un nombre', () => {
-       should(calculerTVA(article1.prixHT, article1.tauxTVA)).be.a.Number();
-       should(calculerTVA(article2.prixHT, article2.tauxTVA)).be.a.Number();
-       should(calculerTVA(article3.prixHT, article3.tauxTVA)).be.a.Number();
-    }
-    );
-});
-describe('Test de la fonction calculFraisPort', () => {
-    it('calculFraisPort doit retourner un nombre', () => {
-        should(calculerFraisPort('coucou')).be.a.Number();
-        should(calculerFraisPort(23)).be.a.Number();
-        should(calculerFraisPort(calculPanier())).be.a.Number();
-    }
-    );
-}
-);
+import {calculPanier, calculerTVA, calculerFraisPort} from '../index.js';
+test('Test de la fonction calculerPanier', () => {
+    expect(calculPanier()).toBe(103.25);
+})
+test('Test de la fonction calculerTVA', () => {
+    expect(calculerTVA(15, 5)).toBe(0.75);
+})
+test('Test de la fonction calculerFraisPort', () => {
+    expect(calculerFraisPort(103.25)).toBe(15);
+})

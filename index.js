@@ -69,8 +69,8 @@ export const calculPanier = () => {
         }
         prixTotal += (article.prixHT + calculerTVA(article.prixHT, article.tauxTVA)) * article.quantite;
     });
-    console.log(`Le prix total du panier est de ${prixTotal} €`);
-    console.log(`Le prix des frais de port est de ${calculerFraisPort(prixTotal)} €`);
+    // console.log(`Le prix total du panier est de ${prixTotal} €`);
+    // console.log(`Le prix des frais de port est de ${calculerFraisPort(prixTotal)} €`);
     return prixTotal;
 }
 
